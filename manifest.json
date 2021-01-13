@@ -1,0 +1,35 @@
+{
+  "name": "Mint Background Sync to Firestore ",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Sync your transactions from Mint to Firestore",
+  "homepage_url": "https://github.com/aduyng/mint-background-sync-to-firestore",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com https://firebasestorage.googleapis.com; object-src 'self'; connect-src 'self' wss://*.firebaseio.com https://firebasestorage.googleapis.com;",
+  "options_page": "src/options_custom/index.html",
+  "permissions": [
+    "https://www.gstatic.com/*",
+    "https://mint.intuit.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mint.intuit.com/*"
+      ],
+      "js": [
+        "src/lib/onDocumentReady.js",
+        "src/lib/downloadFile.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}

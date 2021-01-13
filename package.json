@@ -1,0 +1,23 @@
+{
+  "name": "@aduyng/mint-background-sync-to-firestore",
+  "version": "1.0.0",
+  "description": "A Chrome extension that syncs the transactions in the background to firebase",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aduyng/mint-background-sync-to-firestore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aduyng/mint-background-sync-to-firestore/issues"
+  },
+  "homepage": "https://github.com/aduyng/mint-background-sync-to-firestore#readme",
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
